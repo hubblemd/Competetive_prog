@@ -1,0 +1,17 @@
+//this is to find the GCD of two numbers
+//concept based on long division
+//gcd(a,b)=gcd(b,a) one step earlier
+//a*b=gcd(a,b)*lcm(a,b)
+//to get c/d to simplest form divide by gcd in both numerator and denominator
+
+#include <iostream>
+
+int gcd(int a, int b) {
+    if (b == 0) {
+        return a;
+    } else {
+        return gcd(b, a % b);
+    }
+}
+
+TC: logarithmic 
